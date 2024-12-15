@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drupal Coder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="src/slick.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="src/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+</head>
+<body>
+<header>
+<div class="navbar" id="navbar">
+    <div class="mobile-nav">
+        <img src="src/img/drupal-coder.svg" class="drup-logo" alt="drupal-logo">
+        <button class="navbar-toggle" id="navbar-toggle">
+            <div class="buttonlines">
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+            </div>
+        </button>
+    </div>
+
+    <ul class="navmenu" style="display: none" id="mobileMenu">
+        <li class="menuline"><a href="https://drupal-coding.com/support" class="menulink">ПОДДЕРЖКА DRUPAL</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/drupal-admin" class="menulink">АДМИНИСТРИРОВАНИЕ</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/import-migrate-upgrade" class="menulink innermenulink">МИГРАЦИЯ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/backup" class="menulink innermenulink">БЭКАПЫ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-security-audit" class="menulink innermenulink">АУДИТ БЕЗОПАСНОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/boost-drupal" class="menulink innermenulink">ОПТИМИЗАЦИЯ СКОРОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/ssl" class="menulink innermenulink">ПЕРЕЕЗД НА HTTPS</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОДВИЖЕНИЕ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/drupal-seo" class="menulink">РЕКЛАМА</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/team" class="menulink">О НАС</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/team#team" class="menulink innermenulink">КОМАНДА</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupalgive" class="menulink innermenulink">DRUPALGIVE</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/blog" class="menulink innermenulink">БЛОГ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-courses" class="menulink innermenulink">КУРСЫ DRUPAL</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОЕКТЫ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/contacts" class="menulink">КОНТАКТЫ</a></li>
+    </ul>
+    <ul class="navmenu"  id="desktopMenu">
+        <li class="menuline"><a href="https://drupal-coding.com/support" class="menulink">ПОДДЕРЖКА DRUPAL</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/drupal-admin" class="menulink">АДМИНИСТРИРОВАНИЕ</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/import-migrate-upgrade" class="menulink innermenulink">МИГРАЦИЯ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/backup" class="menulink innermenulink">БЭКАПЫ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-security-audit" class="menulink innermenulink">АУДИТ БЕЗОПАСНОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/boost-drupal" class="menulink innermenulink">ОПТИМИЗАЦИЯ СКОРОСТИ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/ssl" class="menulink innermenulink">ПЕРЕЕЗД НА HTTPS</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОДВИЖЕНИЕ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/drupal-seo" class="menulink">РЕКЛАМА</a></li>
+        <li class="menuline">
+            <div class="menulinewrapper">
+                <a href="https://drupal-coding.com/team" class="menulink">О НАС</a>
+                <div class="triangle"></div>
+            </div>
+            <ul class="innermenu">
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/team#team" class="menulink innermenulink">КОМАНДА</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupalgive" class="menulink innermenulink">DRUPALGIVE</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/blog" class="menulink innermenulink">БЛОГ</a>
+                </li>
+                <li class="innermenuline">
+                    <a href="https://drupal-coding.com/drupal-courses" class="menulink innermenulink">КУРСЫ DRUPAL</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menuline"><a href="" class="menulink">ПРОЕКТЫ</a></li>
+        <li class="menuline"><a href="https://drupal-coding.com/contacts" class="menulink">КОНТАКТЫ</a></li>
+    </ul>
+</div>
+</header>
+    <section class="preview">
+        <div class="preview-bg"><video id="bg-video" autoplay="autoplay" loop="" preload="auto" muted=""><source src="src/video.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.</video></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">Поддержка сайтов на Drupal</h1>
+                    <div class="support-main-description">
+                        Сопровождение и поддержка сайтов <br> на CMS Drupal любых версий и запущенности
+                    </div>
+                    <div class="preview-wrapper">
+                        <a href="#plans" class="preview-btn">Тарифы</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row achievements">
+                        <div class="col-md-4 col-sm-4 col-xs-6 achievement">
+                            <div class="achievement-wrapper">
+                                <div class="achievement-title">#1 <img alt="1 place" src="src/img/cup.png"></div>
+                                <div class="achievement-description">
+                                    Drupal разработчик <br> в России по версии <br> Рейнтига Рунета
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6 achievement">
+                            <div class="achievement-wrapper">
+                                <div class="achievement-title">3+</div>
+                                <div class="achievement-description">
+                                    Средний опыт<br> специалистов <br> более 3 лет
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6 achievement">
+                            <div class="achievement-wrapper">
+                                <div class="achievement-title">14</div>
+                                <div class="achievement-description">
+                                    лет опыта в сфере <br> Drupal
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6 achievement">
+                            <div class="achievement-wrapper">
+                                <div class="achievement-title">50+</div>
+                                <div class="achievement-description">
+                                    Модулей и тем <br> в формате DrupalGive
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6 achievement">
+                            <div class="achievement-wrapper">
+                                <div class="achievement-title">90 000+</div>
+                                <div class="achievement-description">
+                                    часов поддержки <br> сайтов на Drupal
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6 achievement">
+                            <div class="achievement-wrapper">
+                                <div class="achievement-title">300+</div>
+                                <div class="achievement-description">
+                                    Проектов <br> на поддержке
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+    <div class="ftp-56"><div class="competencies">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="block-title">13 лет совершенствуем <br> компетенции в Друпал <br> Поддержке</h2>
+                    <div class="competencies-description">
+                       Разрабатываем и оптимизируем модули, расширяем <br> функциональность сайтов, обновляем дизайн
+                    </div>
+                </div>
+            </div>
+            <div class="row row-flex competencies-row">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="" src="src/img/competency-1.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Добавление <br> информации на сайт <br> создание новых  <br> разделов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="" src="src/img/competency-2.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Разработка <br> и оптимизация <br> модулей сайта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="Integration" src="src/img/competency-3.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Интеграция с CRM, <br> 1C, платежными системами <br> любыми веб-сервисами
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="Design" src="src/img/competency-4.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                               Любые доработки функционала <br> и дизайна
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="Security" src="src/img/competency-5.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Аудит и мониторинг <br> Безопасности Drupal сайтов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="Migration" src="src/img/competency-6.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Миграция, импорт <br>  контента и апргейд <br> Drupal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="Optimization" src="src/img/competency-7.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Оптимизация  <br> и ускорение <br> Drupal-сайтов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="SEO" src="src/img/competency-8.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Веб-маркетинг, <br> консультации <br> и работы по SEO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+        <div class="advantages with-expertise">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="block-title">Поддержка <br> от Drupal-coder</h2>
+                    </div>
+                </div>
+                <div class="row row-flex advantages-row">
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">01.</div>
+                                    <div class="advantage-title">Постановка задачи по Email</div>
+                                </div>
+                                <div class="advantage-body">
+                                    Удобная и привычная модель постановки задач, при которой задачи фиксируются и никогда не теряются
+                                </div>
+                                <div class="advantage-icon"><img alt="Email" src="src/img/support1.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">02.</div>
+                                    <div class="advantage-title">Система Helpdesk - отчетность, прозрачность</div>
+                                </div>
+                                <div class="advantage-body">
+                                    Возможность просмотреть все заявки и отработанные часы в личном кабинете через браузер.
+                                </div>
+                                <div class="advantage-icon"><img alt="Chart" src="src/img/support2.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">03.</div>
+                                    <div class="advantage-title">Расширенная техническая поддержка </div>
+                                </div>
+                                <div class="advantage-body">
+                                   Возможность организации расширенной техподдержки с 6:00 до 22:00 без выходных.
+                                </div>
+                                <div class="advantage-icon"><img alt="Extend" src="src/img/support3.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">04.</div>
+                                    <div class="advantage-title">Персональный менеджер проекта</div>
+                                </div>
+                                <div class="advantage-body">
+                                    CВаш менеджер проекта всегда в курсе текущего состояния проекта и в любой момент готов ответить на любые вопросы.
+                                </div>
+                                <div class="advantage-icon"><img alt="User" src="src/img/support4.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">05.</div>
+                                    <div class="advantage-title">Удобные способы оплаты</div>
+                                </div>
+                                <div class="advantage-body">
+                                    Безналичный расчет по договору или электронные деньги: WebMoney, Яндекс.Деньги, Paypal.
+                                </div>
+                                <div class="advantage-icon"><img alt="payments" src="src/img/support5.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">06.</div>
+                                    <div class="advantage-title">Работаем с SLA и NDA </div>
+                                </div>
+                                <div class="advantage-body">
+                                    Работа в рамках соглашений о конфиденциальности и об уровне качества работ.
+                                </div>
+                                <div class="advantage-icon"><img alt="Doc" src="src/img/support6.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">07.</div>
+                                    <div class="advantage-title">Штатные специалисты</div>
+                                </div>
+                                <div class="advantage-body">
+                                    Надежные штатные специалисты, никаких фрилансеров.
+                                </div>
+                                <div class="advantage-icon"><img alt="Users" src="src/img/support7.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                        <div class="advantage">
+                            <div class="advantage-wrapper">
+                                <div class="advantage-header">
+                                    <div class="advantage-num">08.</div>
+                                    <div class="advantage-title">Удобные каналы связи </div>
+                                </div>
+                                <div class="advantage-body">
+                                    Консультации по телефону, скайпу, в мессенджерах.
+                                </div>
+                                <div class="advantage-icon"><img alt="Questions" src="src/img/support8.svg" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="expertise">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 col-md-offset-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="block-title">Экспертиза в Drupal<br>опыт 14 лет!</h2>
+                            </div>
+                        </div>
+                        <div class="row row-flex expertise-row">
+                            <div class="col-sm-6 col-xs-12 expertise-col">
+                                <div class="expertise-item">
+                                    <div class="expertise-item-body">
+                                        Только системный подход - контроль версий, развертывание и тестирование!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 expertise-col">
+                                <div class="expertise-item">
+                                    <div class="expertise-item-body">
+                                       Только Drupal сайты, не берем на поддержку сайты на других CMS!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 expertise-col">
+                                <div class="expertise-item">
+                                    <div class="expertise-item-body">
+                                        Участвуем в разработке ядра Drupal и модулей на Drupal.org.  разрабатываем свои модули Drupal
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 expertise-col">
+                                <div class="expertise-item">
+                                    <div class="expertise-item-body">
+                                        Поддерживаем сайты на Drupal 5, 6, 7 и 8
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="expertise-img"><img alt="helpdesk" class="img-responsive" src="src/img/laptop.png"></div>
+        </div></div>
+</section>
+    <section id="plans" class="block   clear">
+
+        <h2 class="block-title">Тарифы</h2>
+
+        <div class=" ftp-56   "><div class="tariffs">
+            <div class="container">
+                <div class="row row-flex tariffs-row">
+                    <div class="col-sm-4 col-xs-12 col-flex">
+                        <div class="tariff">
+                            <div class="tariff-wrapper">
+                                <div class="tariff-header">
+                                    <div class="tariff-title">Стартовый </div>
+                                    <br>
+                                </div>
+                                <div class="tariff-body">
+                                    <div class="tarrif-body-item">&check; Консультация и работы по SEO</div>
+                                    <div class="tarrif-body-item">&check; Услуги дизайнера</div>
+                                    <div class="tarrif-body-item">&check; Неиспользованные оплаченые часы переносятся на следующий месяц</div>
+                                    <div class="tarrif-body-item">&check; Предоплата от 6 000 рублей в месяц</div>
+                                </div>
+                                <div class="tariff-footer">
+                                    <a href="#support" class="contact-form tariff-footer-btn" tabindex="-1">Свяжитесь с нами!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-flex col-xs-12">
+                        <div class="tariff">
+                            <div class="tariff-wrapper">
+                                <div class="tariff-header">
+                                    <div class="tariff-title">Бизнес</div>
+                                    <br>
+                                </div>
+                                <div class="tariff-body ">
+                                    <div class="tarrif-body-item">&check; Консультация и работы по SEO</div>
+                                    <div class="tarrif-body-item">&check; Услуги дизайнера</div>
+                                    <div class="tarrif-body-item">&check; Высокое время реации - до 2 рабочих дней</div>
+                                    <div class="tarrif-body-item">&check; Неиспользованные оплаченые часы переносятся на следующий месяц</div>
+                                    <div class="tarrif-body-item">&check; Предоплата от 30 000 рублей в месяц</div> </div>
+                                <div class="tariff-footer">
+                                    <a href="#support" class="contact-form tariff-footer-btn" tabindex="-1">Свяжитесь с нами!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-flex col-xs-12">
+                        <div class="tariff">
+                            <div class="tariff-wrapper">
+                                <div class="tariff-header">
+                                    <div class="tariff-title">VIP</div>
+                                    <br>
+                                </div>
+                                <div class="tariff-body">
+                                    <div class="tarrif-body-item">&check; Консультация и работы по SEO</div>
+                                    <div class="tarrif-body-item">&check; Услуги дизайнера</div>
+                                    <div class="tarrif-body-item">&check; Максимальное время реации - в день обращения</div>
+                                    <div class="tarrif-body-item">&check; Неиспользованные оплаченые часы переносятся на следующий месяц</div>
+                                    <div class="tarrif-body-item">&check; Предоплата от 270 000 рублей в месяц</div> </div>
+                            </div>
+                                <div class="tariff-footer">
+                                    <a href="#support" class="contact-form tariff-footer-btn" tabindex="-1">Свяжитесь с нами!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-xs-12">
+                        <div class="tariffs-ps">
+                            Вам не подходят наши тарифы? Оставьте заявку и ы предложим вам индивидуальные условия!
+                            <a href="#support" class="tariffs-link">Получить индивидуальный тариф</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="views-element-container container block block-views clear" >
+    <div class="competencies">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="block-title">Наши профессиональные разработчики выполняют быстро любые задачи</h2>
+                </div>
+            </div>
+            <div class="row row-flex competencies-row">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="" src="src/img/competency-20.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Добавление <br> информации на сайт <br> создание новых  <br> разделов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="" src="src/img/competency-21.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Разработка <br> и оптимизация <br> модулей сайта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                        <div class="competency-wrapper">
+                            <div class="competency-header">
+                                <div class="competency-icon"><img alt="Integration" src="src/img/competency-22.svg" class="img-responsive"></div>
+                            </div>
+                            <div class="competency-body">
+                                Интеграция с CRM, <br> 1C, платежными системами <br> любыми веб-сервисами
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="views-element-container container block block-views block-views-blockteam-team-new clear" id="block-views-block-team-new">
+
+        <h2 class="block-title">Команда</h2>
+
+        <div class="form-group ml-1">
+            <div class="text-center">
+                <div class="view-content">
+                    <div class="col-xs-6 col-sm-6 col-md-4 views-row">
+                        <article typeof="schema:Person"  class="user-teaser">
+                            <div class="photo">
+                                <img loading="eager" width="280" height="280" src="src/img/IMG_2472_0.jpg" alt="Profile picture for user Сергей Синица" typeof="foaf:Image">
+                            </div>
+
+                            <div class="emp-name">
+                                Сергей Синица
+                            </div>
+                            <div class="emp-post  field--name-field-post   ">Руководитель отдела веб-разработки, канд. техн. наук, заместитель директора</div>
+                        </article>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-4 views-row">
+                        <article typeof="schema:Person"  class="user-teaser">
+                            <div class="photo  field--name-user-picture field--type-image  ">
+                                    <img loading="eager" width="280" height="280" src="src/img/IMG_2539_0.jpg" alt="Profile picture for user Roman Agabekov" typeof="foaf:Image">
+                            </div>
+                            <div class="emp-name">
+                                Роман Агабеков
+                            </div>
+                            <div class="emp-post  field--name-field-post   ">Руководитель отдела DevOPS, директор</div>
+                        </article>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-4 views-row">
+                        <article typeof="schema:Person" class="user-teaser">
+                            <div class="photo  field--name-user-picture field--type-image  ">
+                                    <img loading="eager" width="280" height="280" src="src/img/IMG_2474_1.jpg" alt="Profile picture for user Алексей Синица" typeof="foaf:Image">
+                            </div>
+                            <div class="emp-name">
+                                Алексей Синица
+                            </div>
+                            <div class="emp-post  field--name-field-post   ">Руководитель отдела поддержки сайтов</div>
+                        </article>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-4 views-row">
+                        <article typeof="schema:Person" class="user-teaser">
+                            <div class="photo  field--name-user-picture field--type-image  ">
+                                    <img loading="eager" width="280" height="280" src="src/img/IMG_2522_0.jpg" alt="Profile picture for user d.Bochkareva" typeof="foaf:Image">
+                            </div>
+                            <div class="emp-name">
+                                Дарья Бочкарёва
+                            </div>
+                            <div class="emp-post  field--name-field-post   ">Руководитель отдела продвижения, контекстной рекламы и контент-поддержки сайтов</div>
+                        </article>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-4 views-row">
+                        <article typeof="schema:Person"  class="user-teaser">
+                            <div class="photo  field--name-user-picture field--type-image  ">
+                                    <img loading="eager"  width="280" height="280" src="src/img/IMG_9971_16.jpg" alt="Profile picture for user Ирина" typeof="foaf:Image">
+                            </div>
+                            <div class="emp-name">
+                                Ирина Торкунова
+                            </div>
+                            <div class="emp-post  field--name-field-post   ">Менеджер по работе с клиентами</div>
+                        </article>
+                    </div>
+
+                </div>
+                <div class="more-link form-group"><a href="https://drupal-coding.com/team">Вся команда</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="views-element-container container block block-views block-views-blockkeys-block-1 clear" id="block-views-block-keys-block">
+
+    <h2 class="block-title">Последние кейсы </h2>
+
+
+    <div class="form-group"><div class="view view-keys view-id-keys view-display-id-block_1">
+
+
+
+        <div class="view-content">
+
+
+            <article class="blog is-promoted keys-1 clear">
+                <div class="keys-1__wrapper">
+                    <div class="keys-1__picture">
+
+                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
+                            <img width="840" height="475" src="src/articles/IMG_1653.JPG" alt="Data cache" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div>
+
+                    </div>
+
+                    <div class="keys-1__container">
+                        <div class="keys-1__header">
+
+                            <h2>
+                                <a rel="bookmark">
+                                    <span>Настройка кеширования данных. Апгрейд сервера. Ускорение работы сайта в 30 раз!</span>
+                                </a>
+                            </h2>
+
+                            <div class="keys-1__header-date">
+                                04.05.2020
+                            </div>
+                        </div>
+
+                        <div class="keys-1__content">
+
+                            <div class=" ftp-56   "><p>Влияние скорости загрузки страниц сайта на отказы и конверсии. Кейс ускорения...</p></div>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog is-promoted keys-2 clear">
+                <div class="keys-2__wrapper">
+                    <div class="keys-2__picture">
+
+                        <div class=" field--name-field-blog-img field--type-image  ">
+                            <picture>
+                                <img loading="eager" sizes="max-width:767px" width="700" height="360" src="src/articles/IMG_1652.JPG" alt="Ecommerce metrics" typeof="foaf:Image">
+                            </picture>
+                        </div>
+
+                    </div>
+
+                    <div class="keys-2__container">
+                        <div class="keys-2__header">
+
+                            <h2>
+                                <a href="" rel="bookmark">
+                                    <span>Использование отчётов Ecommerce в Яндекс.Метрике</span>
+                                </a>
+                            </h2>
+
+                        </div>
+
+                        <div class="keys-2__content">
+
+                        </div>
+                    </div>
+                </div></article>
+
+
+            <article class="blog is-promoted keys-1 clear">
+                <div class="keys-1__wrapper">
+                    <div class="keys-1__picture">
+
+                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
+                            <img loading="eager" width="840" height="475" src="src/articles/IMG_1657.JPG" alt="Conversion Improvement" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div>
+
+                    </div>
+
+                    <div class="keys-1__container">
+                        <div class="keys-1__header">
+
+                            <h2>
+                                <a href="" rel="bookmark">
+                                    <span>Повышение конверсии страницы с формой заявки с применением AB-тестирования</span>
+                                </a>
+                            </h2>
+
+                            <div class="keys-1__header-date">
+                                24.01.2020
+                            </div>
+                        </div>
+
+                        <div class="keys-1__content">
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog is-promoted keys-1 clear">
+                <div class="keys-1__wrapper">
+                    <div class="keys-1__picture">
+
+                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
+                            <img loading="eager" width="840" height="475" src="src/articles/IMG_1655.JPG" alt="Drupal 7 acceleration" typeof="foaf:Image">
+                        </picture>
+
+                        </div>
+
+                    </div>
+
+                    <div class="keys-1__container">
+                        <div class="keys-1__header">
+
+                            <h2>
+                                <a href="" rel="bookmark">
+                                    <span>Drupal 7: ускорение времени генерации страниц интернет-магазина на 32%</span>
+                                </a>
+                            </h2>
+
+                            <div class="keys-1__header-date">
+                                23.09.2019
+                            </div>
+                        </div>
+
+                        <div class="keys-1__content">
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="blog is-promoted keys-1 clear">
+                <div class="keys-1__wrapper">
+                    <div class="keys-1__picture">
+
+                        <div class=" field--name-field-blog-img field--type-image  ">    <picture>
+                            <img loading="eager" width="840" height="475" src="src/articles/IMG_1656.JPG" alt="business-online" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div>
+
+                    </div>
+
+                    <div class="keys-1__container">
+                        <div class="keys-1__header">
+
+                            <h2>
+                                <a href="" rel="bookmark">
+                                    <span>Обмен товарами и заказами интернет-магазинов на Drupal 7 с 1С: Предприятие, МойСклад, Класс365</span>
+                                </a>
+                            </h2>
+
+                            <div class="keys-1__header-date">
+                                22.08.2019
+                            </div>
+                        </div>
+
+                        <div class="keys-1__content">
+
+                            <div class=" ftp-56   "><p>Опубликован релиз модуля...</p></div>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+    </div>
+
+</section>
+    <section class="views-element-container block block-views block-views-blocktestimonials-block-1 clear" id="block-views-block-testimonials-block-1">
+
+    <h2 class="block-title">Отзывы</h2>
+
+    <div class="form-group"><div class="container view view-testimonials view-id-testimonials view-display-id-block_1">
+
+        <div class="view-content" >
+            <div class="slick">
+            <div  id="slick-review">
+                <div class="" >
+                    <div class="views-field-field-project-logo">
+                        <div class="field-content">
+                            <img src="src/img/sklad-cvetov.png" width="200" height="150" alt="Ciel parfum" typeof="foaf:Image">
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                            Я хотел бы поделиться своим опытом работы с сайтом по починке кода для сайта "Цветочный склад".
+
+Я обратился на этот сайт, потому что столкнулся с проблемами в работе своего онлайн-магазина. Сайт работал медленно, некоторые функции не работали, и я понимал, что мне нужна помощь профессионала.
+
+После того как я оставил заявку на сайте, со мной связался специалист. Он задал мне несколько вопросов о проблемах, с которыми я столкнулся, и предложил несколько вариантов решения. Мы договорились о сроках и стоимости работы.
+
+Он провёл диагностику сайта и выявил все проблемы. Затем он приступил к их устранению. Работа заняла несколько часов, но результат превзошёл мои ожидания.
+
+Сайт стал работать быстрее, все функции были восстановлены, и я смог продолжить свою работу без каких-либо проблем. Я был очень доволен результатом.
+
+Также хочу отметить профессионализм и компетентность специалиста. Он был вежливым и внимательным, а также ответил на все мои вопросы.
+
+В целом, я рекомендую этот сайт по починке кода всем, кто столкнулся с проблемами в работе своего сайта. Здесь вам помогут быстро и качественно решить все ваши проблемы.
+
+Из недостатков могу отметить только то, что цены на услуги могут быть немного выше, чем у конкурентов. Однако я считаю, что это оправдано высоким качеством работы и профессионализмом специалистов.
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-author">
+                        <div class="field-content">С благодарностью, Команда
+                            <a href="https://sklad-cvetov.ru/#popup:infoblock" tabindex="0">Цветочный склад</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="" >
+                    <div class="views-field-field-project-logo">
+                        <div class="field-content">
+                            <img src="src/img/duolingo.png" width="78" height="46" alt="Ciel parfum" typeof="foaf:Image">
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                            Хочу поделиться своим опытом работы с командой разработчиков, которые чинили код на нашем сайте. Они настоящие профессионалы своего дела!
+
+Недавно мы столкнулись с серьёзной проблемой — на сайте появилась критическая ошибка в коде, которая приводила к сбоям в работе некоторых функций. Это было очень неприятно, так как мы понимали, что это может негативно сказаться на наших пользователях.
+
+Мы обратились за помощью к команде разработчиков и не пожалели об этом. Они быстро поняли, в чём проблема, и предложили нам несколько вариантов решения. Мы выбрали наиболее оптимальный вариант, и команда сразу же приступила к работе.
+
+Уже через несколько часов ошибка была исправлена, и сайт снова заработал без сбоев. Мы были очень рады, что обратились именно к этой команде разработчиков. Они проявили себя как настоящие профессионалы, которые знают своё дело и готовы помочь в любой ситуации.
+
+Особенно хочу отметить их внимание к деталям и умение находить оптимальные решения для сложных задач. Они не только исправили ошибку в коде, но и дали нам несколько советов по улучшению работы сайта. Теперь наш сайт работает быстрее и стабильнее, а также улучшилась его безопасность.
+
+Я очень доволен результатом работы команды разработчиков. Они действительно знают своё дело и готовы прийти на помощь в любой момент. Рекомендую их всем, кто ищет профессионалов для починки кода на своём сайте.
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-author">
+                        <div class="field-content">С уважением, от команды
+                            <a href="https://ru.duolingo.com/" tabindex="0">Duolingo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="" >
+                    <div class="views-field-field-project-logo">
+                        <div class="field-content">
+                            <img src="src/img/yandex.png" width="85" height="36" alt="Ciel parfum" typeof="foaf:Image">
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                            Я хотел бы поделиться своим опытом работы с командой, которая специализируется на исправлении ошибок в коде. Недавно мне пришлось обратиться к ним за помощью, так как у меня возникли проблемы с моим проектом.
+
+Первое, что меня впечатлило, — это профессионализм и компетентность команды. Они быстро ответили на мой запрос и предложили несколько вариантов решения проблемы. Это сразу же вызвало доверие к их работе.
+
+После обсуждения всех деталей мы договорились о сроках выполнения задачи. Команда работала над моим проектом очень оперативно и профессионально. Они не только исправили все ошибки в коде, но и дали мне несколько советов по улучшению структуры кода.
+
+Кроме того, команда была очень внимательна к моим пожеланиям и замечаниям. Они всегда были готовы ответить на мои вопросы и объяснить свои действия. Это было очень приятно и полезно для меня.
+
+В результате работы команды мой проект стал более надёжным и функциональным. Я был очень доволен результатом и решил продолжить сотрудничество с этой командой.
+
+Также стоит отметить, что команда предоставляет подробные отчёты о проделанной работе. Это позволяет мне видеть, какие именно изменения были внесены в код и почему.
+
+Я рекомендую эту команду всем, кто ищет профессионалов в области исправления ошибок в коде. Они действительно знают своё дело и готовы помочь вам достичь желаемого результата.
+
+Особенно хочу выделить следующие преимущества работы с этой командой:
+* профессионализм и компетентность;
+* оперативность и качество работы;
+* внимание к деталям и пожеланиям клиента;
+* предоставление подробных отчётов.
+
+Если вы ищете надёжных специалистов по исправлению ошибок в коде, то эта команда — отличный выбор. Вы можете быть уверены в качестве их работы и профессионализме.
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-author">
+                        <div class="field-content">С уважением, от команды
+				<a href="https://music.yandex.ru/home" tabindex="0">Yandex.music</a>
+                    </div>
+                </div>
+</div>
+                <div class="" >
+                    <div class="views-field-field-project-logo">
+                        <div class="field-content">
+                            <img src="src/img/rutube.jpg" width="78" height="46" alt="Ciel parfum" typeof="foaf:Image">
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+
+Недавно воспользовался сервисом Drupal-Coder для исправления ошибок в коде сайта Rutube, и вот что о нём хочу сказать.
+
+Первое, что стоит отметить — доступность и удобство использования сайта. Платформа имеет понятный интерфейс, что позволяет быстро находить необходимые функции. Процесс отправки кода для анализа прост и не вызывает затруднений.
+
+В результате использования сервиса я получил детальный отчет о найденных ошибках, а также рекомендации по их исправлению. Особенно приятно, что все советы подкреплены примерами, что значительно упростило процесс внедрения изменений на сайт.
+
+Что касается сроков обработки, то они оказались вполне приемлемыми. Ответ был получен в течение 48 часов, что не так уж и долго, учитывая объем анализа.
+
+В целом, я остался доволен работой Drupal-Coder. Этот ресурс помогает разработчикам улучшать свои проекты, и я определенно рекомендую его всем, кто сталкивается с проблемами в коде своего сайта.
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-author">
+                        <div class="field-content">С благодарностью, от команды
+		<a href="https://rutube.ru" tabindex="0">Rutube</a>
+                    </div>
+                </div>
+</div>
+                <div class="" >
+                    <div class="views-field-field-project-logo">
+                        <div class="field-content">
+                            <img src="src/img/jaguar.png" width="78" height="46" alt="Ciel parfum" typeof="foaf:Image">
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+Обратился к сайту Drupal-Coder для анализа и исправления ошибок в коде моего сайта Jaguar, и хочу поделиться своим опытом.
+
+Первое впечатление от сайта было очень положительным. Визуально он выглядит современно и удобно. Браузит через страницы легко, а информация о сервисах доступна и понятна.
+
+Когда я загрузил код своего сайта для анализа, мне понравилось, что процесс был интуитивно понятным. Служба предложила четкие инструкции, что избавило меня от необходимости искать информацию о том, как правильно отправить файл.
+
+После анализа кода я получил отчет, в котором были указаны все обнаруженные ошибки. Отчет оказался очень информативным: каждая ошибка была описана с указанием строк кода, где она была найдена, а также рекомендаций по её исправлению. Особенно полезными были примеры кода, которые проиллюстрировали, как можно улучшить определённые участки.
+
+Сроки обработки информации были весьма разумными. Я ожидал получить ответ в течение нескольких дней, однако уже через 24 часа мне прислали отчет, что приятно удивило.
+
+Кроме того, служба предоставляет возможность задать вопросы по поводу рекомендаций, что также является большим плюсом. Я воспользовался этой функцией и получил быстрый и подробный ответ от команды.
+
+В результате использования Drupal-Coder я не только исправил ошибки в коде сайта Jaguar, но и значительно улучшил его производительность. Если вы разработчик и хотите эффективным образом решать проблемы с кодом, я смело рекомендую использовать этот ресурс. 
+
+Вообще, это очень полезный инструмент для всех, кто работает с Drupal и стремится к высоким стандартам качества в своем коде.
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-author">
+                        <div class="field-content">C уважением, команда
+<a href="https://www.jaguar.com/russia" tabindex="0">Jaguar</a>
+                    </div>
+                </div>
+            </div>
+
+ <div class="" >
+                    <div class="views-field-field-project-logo">
+                        <div class="field-content">
+                            <img src="src/img/решуегэ.jpg" width="78" height="46" alt="Ciel parfum" typeof="foaf:Image">
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+Недавно я воспользовался услугами сайта Drupal-Coder для исправления ошибок в коде моего сайта "Решу ЕГЭ", и вот мой опыт.
+
+Сайт имеет удобный и функциональный интерфейс. С первых минут работы с ним заметно, что разработчики уделили внимание пользовательскому опыту. Наличие подробной документации и раздела с часто задаваемыми вопросами сделало процесс более понятным, особенно для тех, кто, как и я, не является профессиональным разработчиком.
+
+Процесс загрузки кода на сайт оказался легким и быстрым. Я был приятно удивлён тем, что система автоматически подсказывала, какие именно файлы нужно залить, а также упоминала о возможных проблемах с совместимостью. Это значительно упростило задачу.
+
+После анализа кода я получил исчерпывающий отчет, который содержал информацию о всех найденных ошибках. Отчет был разделён на несколько разделов: критические ошибки, предупреждения и рекомендации по улучшению. Каждая ошибка имела детальное описание и примеры исправленного кода. Это было очень полезно, так как я мог не только увидеть свои ошибки, но и понять, почему именно они были проблемными.
+
+Время обработки текста оказалось достаточно быстрым: результат я получил в течение 36 часов. Это было приятно, особенно учитывая его обширность и качество.
+
+Также отмечу возможность задать вопросы по поводу рекомендаций, что я с радостью использовал. Ответы приходили очень быстро, и я получал понятные объяснения, что позволило мне лучше разобраться в своих ошибках. В команде явно работают опытные специалисты, которые понимают свою работу.
+
+Одним из самых больших плюсов Drupal-Coder стало то, что после исправлений производительность моего сайта значительно улучшилась. Загрузка страниц стала быстрее, а количество ошибок сократилось на 90%. 
+
+В целом, я остался более чем доволен своим опытом работы с Drupal-Coder. Если вы ищете надежный и качественный сервис для исправления ошибок в коде, то этот сайт станет отличным выбором. Я рекомендую его всем разработчикам и владельцам сайтов, которые хотят улучшить качество своего продукта и избавиться от проблем в коде.
+                        </div>
+                    </div>
+                    <div class="views-field views-field-field-report-author">
+                        <div class="field-content">C уважением, команда
+<a href="https://ege.sdamgia.ru" tabindex="0">Решу егэ</a>
+                    </div>
+                </div>
+            </div>
+
+</div>
+            <nav role="navigation" class="slick__arrow">
+                <button type="button" class="review-arrow-prev slick-prev slick-arrow" aria-label="Previous" style="">Previous</button>
+                <span class="slick-review-total"><span class="slick-review-counter">01/ </span></span>
+                <button type="button" class="review-arrow-next slick-next slick-arrow" aria-label="Next" style="">Next</button>
+            </nav>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+</section>
+    <section class="views-element-container block block-views block-views-blockour-clients-block-1 clear" id="block-views-block-our-clients">
+
+    <h2 class="block-title">С нами работают</h2>
+
+
+        <div class="form-group"><div class="view view-our-clients ">
+
+
+            <div class="view-header">
+                Десятки компаний доверяют нам самое ценное, что у них есть в интернете - свои сайты.
+                Мы делаем всё, чтобы наше сотрудничество было долгим.
+            </div>
+
+            <div class="view-content">
+
+                <div  class="slick" data-blazy="" data-once="blazy slick">
+
+                        <div aria-live="polite" class="slick slick-list draggable" >
+                            <div id="slick-customers-first" class="slick-customers slick-track"  role="listbox">
+
+                                <div class="slick__slide slide slide--1 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide21">
+                                    <picture>
+                                        <img loading="eager" srcset="src/img/kubsu.jpeg" width="290" height="155" src="src/img/kubsu.jpeg" alt="japantravel.ru" typeof="foaf:Image">
+                                    </picture>
+                                </div>
+
+                                <div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">
+                                    <picture>
+                                        <img loading="eager" srcset="src/img/logo-vkusnoitochka.png" width="250" height="135" src="src/img/logo-vkusnoitochka.png" alt="Ciel parfum" typeof="foaf:Image">
+                                    </picture>
+                                </div>
+
+                                <div class="slick__slide slide slide--2 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide22">    <picture>
+                            <img loading="eager" srcset="src/img/krasnodar.png" width="100" height="155" src="data:image/krasnodar.png" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">    <picture>
+                            <img loading="eager" srcset="src/img/vkvideo.png" width="290" height="155" src="vkvideo.png" alt="arsa.su" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--4 slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide24">    <picture>
+                            <img loading="eager" srcset="src/img/adidas-logo.webp" width="290" height="155" src="adidas-logo.webp" alt="vekas-automation.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--5 slick-slide slick-active" data-slick-index="5" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide25">    <picture>
+                            <img loading="eager" srcset="src/img/aviasales.jpeg" width="100" height="200" src="aviasales.jpeg" alt="megafurs.com" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--6 slick-slide slick-current slick-active slick-center" data-slick-index="6" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide26">    <picture>
+                            <img loading="eager" srcset="src/img/lacoste.png" width="290" height="155" src="lacoste.png" alt="japantravel.ru" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--7 slick-slide slick-active" data-slick-index="7" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide27">    <picture>
+                            <img loading="eager" srcset="src/img/roctics.png" width="100" height="100" src="roctics.png" alt="confirent.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--8 slick-slide slick-active" data-slick-index="8" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide28">    <picture>
+                            <img loading="eager" srcset="src/img/VALORANT.png" width="290" height="155" src="VALORANT.png" alt="urheiluperhe.com" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--9 slick-slide" data-slick-index="9" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide29">    <picture>
+                            <img loading="eager" srcset="src/img/snowqueen.png" width="100" height="155" src="snowqueen.png" alt="ayurvedadom.com" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--10 slick-slide" data-slick-index="10" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide210">    <picture>
+                            <img loading="eager" srcset="src/img/podrugka.png" width="150" height="155" src="podrugka.png" alt="angel-estate.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--11 slick-slide" data-slick-index="11" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide211">    <picture>
+                            <img loading="eager" srcset="src/img/Youtube_logo.png" width="150" height="155" src="Youtube_logo.png" alt="http://artzacepka.ru/" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--0 slick-slide slick-cloned" data-slick-index="12"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/samsung.avif" width="290" height="155" src="samsung.avif" alt="http://andreyparabellum.ru " typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--1 slick-slide slick-cloned" data-slick-index="13"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/kuchenland.jpeg" width="100" height="155" src="kuchenland.jpeg" alt="Ciel parfum" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--2 slick-slide slick-cloned" data-slick-index="14"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/images.png" width="150" height="155" src="images.png" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--3 slick-slide slick-cloned" data-slick-index="15"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/farbors_ru.jpg" width="290" height="155" src="farbors_ru.jpg" alt="arsa.su" typeof="foaf:Image">
+
+                        </picture>
+                        </div></div></div>
+                    </div>
+                    <nav role="navigation" class="slick__arrow">
+                        <div class="slick__arrow-wrapper">
+                            <button type="button" data-role="none" class="slick-prev visually-hidden" aria-label="Previous" tabindex="0">Previous</button>
+                            <span class="slick-slide-num"></span>
+                            <button type="button" data-role="none" class="slick-next visually-hidden" aria-label="Next" tabindex="0">Next</button>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div class="view-content">
+
+                <div  class="slick" data-blazy="" data-once="blazy slick">
+
+                    <div aria-live="polite" class="slick slick-list draggable" style="padding: 0px 10%;">
+                        <div id="slick-customers-second" class="slick-customers slick-track" style="transform: scaleX(130%)" role="listbox">
+
+                            <div class="slick__slide slide slide--1 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide21">
+                                <picture>
+                                    <img loading="eager" srcset="src/img/dub.png" width="290" height="155" src="src/img/dub.png" alt="japantravel.ru" typeof="foaf:Image">
+                                </picture>
+                            </div>
+
+                            <div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">
+                                <picture>
+                                    <img loading="eager" srcset="src/img/doldapple.png" width="100" height="155" src="doldapple.png" alt="Ciel parfum" typeof="foaf:Image">
+                                </picture>
+                            </div>
+
+                            <div class="slick__slide slide slide--2 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide22">    <picture>
+                                <img loading="eager" srcset="src/img/Logo_NESCAFE.jpg" width="290" height="155" src="Logo_NESCAFE.jpg" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
+
+                            </picture>
+
+                            </div><div class="slick__slide slide slide--3 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide23">    <picture>
+                            <img loading="eager" srcset="src/img/befree.png" width="600" height="155" src="befree.png" alt="arsa.su" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--4 slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide24">    <picture>
+                            <img loading="eager" srcset="src/img/huawei.png" width="100" height="155" src="huawei.png" alt="vekas-automation.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--5 slick-slide slick-active" data-slick-index="5" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide25">    <picture>
+                            <img loading="eager" srcset="src/img/yandex.png" width="100" height="155" src="yandex.png" alt="megafurs.com" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--6 slick-slide slick-current slick-active slick-center" data-slick-index="6" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide26">    <picture>
+                            <img loading="eager" srcset="src/img/roctics.png" width="100" height="155" src="roctics.png" alt="japantravel.ru" typeof="foaf:Image">
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--7 slick-slide slick-active" data-slick-index="7" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide27">    <picture>
+                            <img loading="eager" srcset="src/img/podrugka.png" width="290" height="175" src="podrugka.png" alt="confirent.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--8 slick-slide slick-active" data-slick-index="8" aria-hidden="false" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide28">    <picture>
+                            <img loading="eager" srcset="src/img/rutube.jpg" width="100" height="155" src="rutube.jpg" alt="urheiluperhe.com" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--9 slick-slide" data-slick-index="9" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide29">    <picture>
+                            <img loading="eager" srcset="src/img/delonghi.svg" width="100" height="155" src="delonghi.svg" alt="ayurvedadom.com" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--10 slick-slide" data-slick-index="10" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide210">    <picture>
+                            <img loading="eager" srcset="src/img/jaguar.png" width="320" height="155" src="jaguar.png" alt="angel-estate.ru" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--11 slick-slide" data-slick-index="11" aria-hidden="true" style="width: 310px;" tabindex="-1" role="option" aria-describedby="slick-slide211">    <picture>
+                            <img loading="eager" srcset="src/img/aviasales.jpeg" width="100" height="155" src="aviasales.jpeg" alt="http://artzacepka.ru/" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--0 slick-slide slick-cloned" data-slick-index="12"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/duolingo.png" width="100" height="155" src="duolingo.png" alt="http://andreyparabellum.ru " typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--1 slick-slide slick-cloned" data-slick-index="13"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/vkvideo.png" width="360" height="175" src="vkvideo.png" alt="Ciel parfum" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--2 slick-slide slick-cloned" data-slick-index="14"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/VALORANT.png" width="290" height="155" src="VALORANT.png" alt="http://lpcma.tsu.ru/en" typeof="foaf:Image">
+
+                        </picture>
+
+                        </div><div class="slick__slide slide slide--3 slick-slide slick-cloned" data-slick-index="15"  aria-hidden="true" style="width: 310px;" tabindex="-1">    <picture>
+                            <img loading="eager" srcset="src/img/lacoste.png" width="290" height="155" src="lacoste.png" alt="arsa.su" typeof="foaf:Image">
+
+                        </picture>
+                        </div></div></div>
+                </div>
+                <nav role="navigation" class="slick__arrow">
+                    <div class="slick__arrow-wrapper">
+                        <button type="button" data-role="none" class="slick-prev visually-hidden" aria-label="Previous" tabindex="0">Previous</button>
+                        <span class="slick-slide-num"></span>
+                        <button type="button" data-role="none" class="slick-next visually-hidden" aria-label="Next" tabindex="0">Next</button>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+
+
+</section>
+<section id="block-faq" class="dc-section faq-block block block-block-content clearfix">
+
+    <h2 class="block-title faq-title">FAQ</h2>
+
+
+
+    <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+        <div class="container">
+            <div  class="panel-group panel-faq" id="accordion">
+
+                <div class="panel panel-default panel_open">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Кто непосредственно занимается поддержкой? </a></h4>
+                    </div>
+                    <div class="panel-body" >
+                        Сайты поддерживают штатные сотрудники ООО «Инитлаб», г. Краснодар, прошедшие специальное
+                        обучение и имеющие опыт работы с Друпал от 4 до 15 лет: 8 web-разработчиков, 2 специалиста по
+                        SEO, 4 системных администратора.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Как организована работа поддержки? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                       Работа поддержки организована следующим образом:
+
+1. Обращение. Чтобы связаться с поддержкой, можно использовать несколько способов: оставить заявку через специальную форму на сайте, написать на электронную почту или в чат на сайте.
+
+2. Первичный ответ.После обращения специалист поддержки отвечает в течение нескольких минут (максимум — одного часа). Он уточняет запрос и назначает ответственного исполнителя.
+3. Решение проблемы. Исполнитель анализирует сайт, находит ошибки и начинает работу над их исправлением. В зависимости от сложности задачи этот этап может занять от нескольких часов до нескольких дней.
+4. Отчёт о работе.Специалист поддержки регулярно предоставляет отчёты о проделанной работе. Это позволяет клиенту видеть, какие именно изменения были внесены и почему. Такой подход помогает лучше понимать процесс работы и вносить необходимые корректировки в будущем.
+5. Обратная связь. По завершении работы исполнитель запрашивает обратную связь от клиента. Если у клиента есть замечания или предложения, они обсуждаются и при необходимости вносятся коррективы.
+6. Поддержка после исправления ошибок.Специалисты поддержки остаются на связи даже после завершения основной работы. Они готовы ответить на дополнительные вопросы и помочь с возникшими проблемами.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Что происходит, когда отработаны все предоплаченные часы? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Когда отработаны все предоплаченные часы возможны несколько вариантов развития событий:
+
+1. Продление работы. Если проблема не решена и требуется дополнительное время для её устранения, клиенту будет предложено оплатить дополнительные часы работы. Это позволит продолжить работу над проектом без потери прогресса.
+
+2. Обсуждение условий.С клиентом может быть обсуждено дальнейшее сотрудничество. Например, можно договориться о новых условиях оплаты или о том, чтобы отложить решение оставшихся задач до следующего раза.
+3. Завершение работы.В случае, если проблема решена в рамках предоплаченных часов, работа считается выполненной. Клиент получает отчёт о проделанной работе и может оценить результаты.
+4. Обратная связь. После завершения работы исполнитель запрашивает обратную связь от клиента. Если у клиента есть замечания или предложения, они обсуждаются и при необходимости вносятся коррективы.
+5. Поддержка после исправления ошибок. Специалисты поддержки остаются на связи даже после завершения основной работы. Они готовы ответить на дополнительные вопросы и помочь с возникшими проблемами.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Что происходит, когда не отработы предоплаченные часы за месяц? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Если у вас есть предоплаченный пакет услуг на сайте, и вы не использовали все часы за месяц, то возможны следующие варианты:
+
+1. Перенос часов на следующий месяц.Некоторые компании предоставляют услугу переноса неиспользованных часов на следующий период. Это может быть прописано в условиях вашего договора или соглашения с компанией.
+
+2. Возврат средств.В некоторых случаях компания может предложить возврат средств за неиспользованные часы. Однако это зависит от условий вашего контракта и политики компании.
+
+3. Сохранение часов для будущих услуг. Предоплаченные часы могут быть сохранены для использования в будущем. Вы сможете воспользоваться этими часами при следующем обращении к услугам компании.
+
+4. Изменение условий договора. Если вы хотите использовать оставшиеся часы в другом месяце, вам может потребоваться изменить условия вашего текущего договора. Для этого необходимо связаться с представителями компании и обсудить возможные варианты.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Как происходит оценка и согласование планируемого времени на выполнение заявок? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Оценка и согласование времени на выполнение заявок обычно происходит следующим образом:
+
+1. Сбор информации. Клиент оставляет заявку с описанием проблемы, которую нужно решить. Технический специалист или менеджер уточняет детали заявки, чтобы понять, какие работы нужно выполнить.
+
+2. Оценка сложности.Специалист оценивает сложность задачи, основываясь на своём опыте и знаниях. Он определяет, сколько времени потребуется на решение проблемы.
+
+3. Согласование с клиентом. После оценки специалист согласовывает с клиентом планируемое время выполнения работ. Он объясняет, почему требуется именно столько времени, и отвечает на вопросы клиента.
+
+4. Заключение договора.Если клиент согласен с условиями, заключается договор на оказание услуг. В договоре прописываются все условия сотрудничества, включая сроки выполнения работ.
+
+5. Контроль выполнения. Во время работы специалист следит за соблюдением сроков и информирует клиента о прогрессе. Если возникают непредвиденные сложности, специалист сообщает об этом клиенту и согласовывает новые сроки.
+
+6. Завершение работы. По окончании работ специалист предоставляет клиенту результаты и получает обратную связь. Если клиент доволен работой, сотрудничество продолжается.
+
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Сколько программистов выделяется на проект? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Количество программистов, выделяемых на проект зависит от масштаба и сложности задачи. Если проблема небольшая, может быть достаточно одного специалиста. Для более крупных проектов или сложных задач могут потребоваться два или более программиста, а также другие специалисты: например, дизайнеры, аналитики и тестировщики.
+
+Чтобы определить оптимальное количество людей для проекта, нужно учесть следующие факторы:
+* объём работ;
+* сроки выполнения;
+* сложность задачи;
+* наличие других специалистов в команде;
+* бюджет проекта.
+
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Как подать заявку на внесение изменений на сайте? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Чтобы подать заявку на внесение изменений на сайте, выполните следующие шаги:
+1. Найдите форму заявки. Обычно она находится на главной странице сайта или в разделе «Контакты».
+2. Заполните форму.Укажите свои контактные данные (имя, адрес электронной почты, номер телефона), опишите проблему и приложите необходимые файлы (например, скриншоты ошибок).
+3. Отправьте заявку. Нажмите кнопку «Отправить» или «Подтвердить».
+4. Дождитесь ответа. После получения заявки специалист свяжется с вами для уточнения деталей и оценки стоимости работ.
+5. Согласуйте сроки и стоимость.Если вас всё устроит, вы сможете договориться о сроках выполнения работы и её стоимости.
+
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Как подать заявку на добавление пользователя, изменение настроек веб-сервера и других задач по администрированию? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Чтобы подать заявку на добавление пользователя, изменение настроек веб-сервера и другие задачи по администрированию, выполните следующие шаги:
+
+1. Найдите форму заявки. Обычно она находится на главной странице сайта или в разделе «Контакты». Также может быть специальная форма для заявок на администрирование.
+
+2. Выберите тип заявки.В форме заявки выберите категорию, которая соответствует вашей проблеме (например, «Добавление пользователя», «Изменение настроек веб-сервера» и т. д.).
+
+3. Заполните форму. Укажите свои контактные данные (имя, адрес электронной почты, номер телефона), опишите проблему и приложите необходимые файлы (например, скриншоты ошибок).
+
+4. Отправьте заявку.Нажмите кнопку «Отправить» или «Подтвердить».
+
+5. Дождитесь ответа. После получения заявки специалист свяжется с вами для уточнения деталей и оценки стоимости работ.
+
+6. Согласуйте сроки и стоимость. Если вас всё устроит, вы сможете договориться о сроках выполнения работы и её стоимости.
+
+Если у вас есть какие-то вопросы или проблемы, обратитесь в службу поддержки сайта. Они помогут вам разобраться в ситуации и подскажут, как лучше поступить.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">В течение какого времени начинается работа по заявке? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Время начала работы по заявке на сайте  зависит от загруженности специалистов и сложности проблемы. В некоторых случаях работа может начаться в течение нескольких часов после подачи заявки, особенно если проблема требует срочного решения.
+
+Однако чаще всего специалисты сначала оценивают заявку, согласовывают с клиентом сроки и стоимость работ, а затем приступают к выполнению задачи. Поэтому в большинстве случаев работа начинается в течение одного рабочего дня после согласования всех условий.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">В какое время работает поддержка? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                       Время работы поддержки на сайте зависит от конкретного сервиса. Обычно оно указано в разделе «Контакты» или на главной странице сайта. Поддержка может работать с понедельника по пятницу в дневное время, а в некоторых случаях — круглосуточно и без выходных.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Подходят ли услуги поддержки, если необходимо произвести обновление ядра Drupal или модулей? </a></h4>
+                    </div>
+                    <div class="panel-body" style="display: none">
+                        Да, услуги поддержки могут подойти для обновления ядра Drupal или модулей на сайте. Специалисты помочь с установкой обновлений и исправлением возможных проблем после обновления. Однако важно выбирать опытных специалистов, которые хорошо разбираются в Drupal и имеют опыт работы с модулями этой системы.
+                    </div>
+                </div>
+                <div class="panel panel-default panel_close">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-btn">Можно ли пообщаться со специалистом голосом или в мессенджере? </a></h4>
+                    </div>
+                        <div class="panel-body" style="display: none">
+                            На сайте Drupal-Coder, как и на многих других платформах для исправления ошибок, обычно основное общение происходит через письменные сообщения. Это позволяет обеспечить четкость и сохранить всю переписку для дальнейшего анализа. 
+
+Однако, если вас интересует общение со специалистом голосом или через мессенджер, я рекомендую следующее:
+
+1. Проверьте раздел "Контакты" или "Поддержка" на сайте. Часто там указывают доступные способы связи.
+
+2. Напишите в службу поддержки. Вы можете спросить, есть ли возможность общения через голосовые вызовы или мессенджеры.
+
+Таким образом, если голосовой связи нет в стандартной форме поддержки, возможно, есть возможность организовать такой контакт, просто уточнив это у команды.
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+        <div>
+            <section class="block clear" id="support">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-xs-12 col-sm-6">
+
+                        <div class="field ftp-56"><div class="block-form-wrapper">
+                            <div class="block-form-title">Оставить заявку на <br>поддержку сайта</div>
+
+                            <div class="block-form-description">Срочно нужна поддержка сайта? Ваша команда не успевает справиться самостоятельно или предыдущий подрядчик не справится с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!</div>
+
+                            <div class="block-form-contacts">
+                                <ul>
+                                    <li class="block-form-phone"><a href="tel:8800222-26-73">&#9742;8 800 222-26-73</a></li>
+                                    <li class="block-form-email"><a href="mailto:sales@drupal-coding.com">&#9993;info@drupal-coder.ru</a></li>
+                                </ul>
+                            </div>
+                        </div></div>
+
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 col-sm-6">
+
+                        <div class="field form-container"><form class="contact-form">
+                            <div class="   form-group  ">      <div class="form-item form-type-textfield form-group">
+                                <label for="field-name-value" class="control-label">Ваше имя</label>
+
+
+                                <input class=" form-text form-control" type="text" id="field-name-value" name="name" value="" size="60" maxlength="255" placeholder="Ваше имя">
+
+
+
+                            </div>
+
+                            </div>
+                            <div class="form-group "  id="form-phone-wrapper">
+                                <div class="form-item js-form-item form-type-textfield  form-group">
+                                    <label for="form-phone" class="control-label js-form-required form-required">Телефон</label>
+                                    <input class="  form-text required form-control"  type="text" id="form-phone" name="form-phone" value="" size="60" maxlength="255" placeholder="Телефон" required="required" aria-required="true">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-item form-type-email form-group">
+                                    <label for="form-email" class="control-label form-required">E-mail</label>
+                                    <input  class="form-email required form-control" type="email" id="form-email" name="form-email" value="" size="60" maxlength="254" placeholder="E-mail" required="required" aria-required="true">
+                                </div>
+                            </div>
+                            <div> <div class="form-item form-type-textarea">
+                                <label for="comment-value" class="control-label">Ваш комментарий </label>
+                                    <textarea class="  form-textarea form-control resize-vertical" id="comment-value" name="comment" rows="5" cols="60" placeholder="Ваш комментарий"></textarea>
+                            </div>
+
+                            </div>
+                            <input autocomplete="off"  type="hidden"><input type="hidden" name="form_id"><div class="form-type-checkbox checkbox">
+                            <label for="agreement" class="control-label option form-required"><input required="required" class="form-checkbox required" type="checkbox" id="agreement" name="agreement" value="1" aria-required="true">Отправляя заявку, я даю согласие на <a href="/privacy-policy" target="_blank" rel="nofollow">обработку персональных данных.*</a>.</label>
+                        </div>
+                            <div  class="form-group" id="edit-actions"><button class="btn" type="submit" id="edit-submit" name="op" value="Contact Us">Свяжитесь с нами</button></div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="block-copyright" class="block clear">
+                <div class="fpt-56   "><p>Проект ООО «Инитлаб», Краснодар, Россия. <br>
+                    Drupal является зарегистрированной торговой маркой Dries Buytaert.</p></div>
+            </section>
+
+
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
